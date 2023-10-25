@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!--En la siguiente línea voy por el estilo CSS que ofrece Bootstrap-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <!--estilo CSS al que puede conmplementar o contradecir-->
+        <style>
+            section {
+                scroll-margin-top: 50px;
+            }
+            nav {
+                backdrop-filter: blur(0.5rem);
+            }
+            #foto {
+                background: transparent url("https://picsum.photos/id/213/800/600?blur=6") 0 0 no-repeat;
+                background-size: cover;
+            }
+            footer{
+                background: #4647FA;
+            }
+        </style>
+        <title>Trinidad Rodríguez</title>
+    </head>
+    <body>
+        <!--Barra de navegación fija al tope-->
+        <nav class="navbar fixed-top navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Trinidad Rodríguez</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#lasEspecialidades">Especialidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#losTrabajos">Trabajos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#lasOpiniones">Opiniones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#losContactos">Contactos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Encabezado-->        
+        <header class="vh-100" id="foto">
+            <div class="position-absolute top-50 start-50 translate-middle w-50">
+                <p class="fs-4"> 
+                    Estudiante de cuarto año de diseño integral en la Pontificia Universidad Católica de Chile. En la práctica, me he <a href="#lasEspecialidades" class="link-dark">especializado en ilustración, diseño gráfico y editorial</a>.
+                </p>
+            </div>
+        </header>
+        <!--Los símbolos en este SVG escondido serán reutilizados más abajo-->
+            <svg xmlns="http://www.w3.org/2000/svg"  width="16" height="16" fill="currentColor" class="bi bi-asterisk" style="display: none;"> <symbol id="asterisco" viewBox="0 0 16 16">
+  <path d="M8 0a1 1 0 0 1 1 1v5.268l4.562-2.634a1 1 0 1 1 1 1.732L10 8l4.562 2.634a1 1 0 1 1-1 1.732L9 9.732V15a1 1 0 1 1-2 0V9.732l-4.562 2.634a1 1 0 1 1-1-1.732L6 8 1.438 5.366a1 1 0 0 1 1-1.732L7 6.268V1a1 1 0 0 1 1-1z"/>
+</svg>
+</svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" style="display: none;">
+            <symbol id="lapiz" viewBox="0 0 16 16">
+  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
+</svg>
+            </symbol>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-book" style="display: none;"> <symbol id="libro"viewBox="0 0 16 16">
+  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
+</svg>
+        <!--Sección de #lasEspecialidades-->        
+        <section class="bg-light" id="lasEspecialidades">
+            <div class="container py-5">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h2 class="h4 fw-bolder">
+                            <svg class="me-1 mb-1" width="1em" height="1em" fill="#0018ff"><use href="#libro"></use></svg> Editorial
+                        </h2>
+                        <p>Se centra en la creación y producción de publicaciones editoriales. Estas son trabajadas a través de la conceptualización de un tema, en torno a la visualización, dirección de arte y gráfica de este. Así finalmente todo lo que constituye la publicación funciona bajo un mismo criterio.</p>
+                        <small>#editorial</small>
+                    </div>
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h2 class="h4 fw-bolder">
+                            <svg class="me-1 mb-1" width="1em" height="1em" fill="#0018ff"><use href="#lapiz"></use></svg> Ilustración
+                        </h2>
+                        <p>Se utiliza la ilustración como medio de representación para la comunicación visual. Así, a través de una cultura visual y gráfica, se utiliza de forma libre la expresividad y creatividad como recurso gráfico.</p>
+                        <small>#ilustracion</small>
+                    </div>
+                    <div class="col-lg-4">
+                        <h2 class="h4 fw-bolder">
+                            <svg class="me-1 mb-1" width="1em" height="1em" fill="#0018ff"><use href="#asterisco"></use></svg> Gráfico
+                        </h2>
+                        <p>Proyectos de comunicación visual que transmiten mensajes específicos a partir de un abstracto que define de manera conceptual lo que se quiere transmitir. A partir de esto y de la especificación de objetivos determinados, se utilizan recursos gráficos y visuales para intervenir en una interfaz específica.</p>
+                        <small>#grafico</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Sección de #losTrabajos-->        
+        <section class="border-top border-bottom" id="losTrabajos">
+                <div class="container py-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="trabajos"></div>
+            </div>
+        </section>
+        <!--Sección de #lasOpiniones-->        
+        <section class="bg-light" id="lasOpiniones">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Opiniones</h2>
+                    <p class="lead mb-0">Algunos clientes felices</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-11 col-md-10 col-lg-9 col-xl-8 mx-auto">
+                        <!-- Primer comentario-->
+                         <div class="card mb-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="mb-1">El afiche para 'Tinta Arte Impreso' no solo representa la feria, sino también la colaboración entre mentes creativas. La variedad de lecturas posibles muestra la diversidad de perspectivas y enfoques dentro del grupo. Es un testimonio del poder de la colaboración y la creatividad colectiva para dar vida a proyectos visuales significativos..</p>
+                                <div class="small text-muted text-end">— Jorge Padilla</div>
+                            </div>
+                        </div>
+                        <!-- Segundo comentario-->
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="mb-1">El afiche creado por Trinidad para 'fragmnt_s', es un testimonio visual profundo sobre la fragilidad de la memoria humana y digital. Logró captar la esencia del documental, lo que resulta muy importante para mí. Se convierte en una reflexión sobre la fragilidad y la resiliencia de nuestros recuerdos, mostrando una conexión y compromiso con la temática del documental. 😌</p>
+                                <div class="small text-muted text-end">— Constanza Barrios, directora de Fragmnt_s</div>
+                            </div>
+                        </div>
+                        <!-- Tercer comentario-->
+                        <div class="card mb-4 shadow-sm">
+                            <div class="card-body p-4">
+                                <p class="mb-1">'Uywa Killpa' no solo educa sobre la tradición del floreo Aymara, sino que también lo hace de una manera encantadora y emocionante. Los pequeños lectores son guiados en un viaje educativo lleno de emoción, conectando con la cultura Aymara de una manera auténtica y accesible.</p>
+                                <div class="small text-muted text-end">— María Choque</div>
+                            </div>
+                        </div>
+                        <!-- Listo, no más comentarios-->
+                     <section class="border-top border-bottom" id="losContactos">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Contactos</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">                        
+                                <h3 class="m-0 fs-5"><span class="fs-1"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-pin" viewBox="0 0 16 16">
+  <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354zm1.58 1.408-.002-.001.002.001zm-.002-.001.002.001A.5.5 0 0 1 6 2v5a.5.5 0 0 1-.276.447h-.002l-.012.007-.054.03a4.922 4.922 0 0 0-.827.58c-.318.278-.585.596-.725.936h7.792c-.14-.34-.407-.658-.725-.936a4.915 4.915 0 0 0-.881-.61l-.012-.006h-.002A.5.5 0 0 1 10 7V2a.5.5 0 0 1 .295-.458 1.775 1.775 0 0 0 .351-.271c.08-.08.155-.17.214-.271H5.14c.06.1.133.191.214.271a1.78 1.78 0 0 0 .37.282z"/>
+</svg></span><br/>Dirección</h4>
+                                <div class="small text-black-50">4923 Market Street, Orlando FL</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <h3 class="m-0 fs-5"><span class="fs-1"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-envelope-heart" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l3.235 1.94a2.76 2.76 0 0 0-.233 1.027L1 5.384v5.721l3.453-2.124c.146.277.329.556.55.835l-3.97 2.443A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741l-3.968-2.442c.22-.28.403-.56.55-.836L15 11.105V5.383l-3.002 1.801a2.76 2.76 0 0 0-.233-1.026L15 4.217V4a1 1 0 0 0-1-1H2Zm6 2.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+</svg></span><br/>Email</h4>
+                                <div class="small text-black-50"><a href="#!">trodriguezc@uc.cl.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body text-center">
+                                <h3 class="m-0 fs-5"><span class="fs-1"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+</svg></span><br/>Teléfono</h4>
+                                <div class="small text-black-50">+56 9 5555 5555</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- El pie de página-->
+        <footer class="py-4 text-white">
+            <div class="container px-5"><p class="text-center small">Trinidad Rodríguez &copy; 2023</p></div>
+        </footer>
+              </footer>
+       
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js">
+        </script>
+        
+    </body>
+</html>
+        <!-- Lo que sigue es JavaScript a secas-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html> 
+</script>
+<script>
+        async function portfolio() {
+            const consulta = await fetch("https://raw.githubusercontent.com/trinirodriguez/clase-12/main/datos.json");
+            const data = await consulta.json();
+            var donde = document.querySelector("#trabajos");
+            data.forEach(function (t, i) {
+                donde.innerHTML +=
+                    `<article class="col"><div class="card h-100 shadow-sm ${t.soporte}"><img src="${t.fotos[0]}" class="card-img-top"><div class="card-body"><h3 class="fs-5"><a href="#" class="link-secondary" data-bs-toggle="modal" data-bs-target="#portafolioModal${i + 1}">${t.nombre}</a></h3><p>${t.abstract}</p><small>#${t.soporte}</small></div></div></article>`;
+                var modal = document.createElement("div");
+                modal.classList.add("portfolio-modal", "modal", "fade");
+                modal.id = `portafolioModal${i + 1}`;
+                modal.tabIndex = "-1";
+                modal.role = "dialog";
+                modal.setAttribute("aria-hidden", "true");
+                modal.innerHTML = `
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="close-modal" data-bs-dismiss="modal"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="-5 0 21 21">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="modal-body">
+                                        <h2 class="text-uppercase">${t.nombre}</h2>
+                                        <small>#${t.soporte}</small>
+                                        <p class="item-intro text-muted">${t.abstract}</p>
+                                        ${t.fotos.map(foto => `<img class="img-fluid d-block mx-auto" src="${foto}" alt="...">`).join('')}
+                                        <p>${t.texto}</p>
+                                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                            <i class="fas fa-times me-1"></i>
+                                            Cerrar proyecto
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+                document.body.appendChild(modal);
+            });
+        }
+        portfolio().catch((error) => console.error(error));
+    </script>
+    </body>
+</html>
